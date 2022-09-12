@@ -1,0 +1,138 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+:root {
+  /* primary-colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --verydark-cyan: hsl(179, 100%, 13%);
+  /* neutral-colors */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --verylight-gray: hsl(0, 0%, 95%);
+  /* fonts */
+  --main-font: "Big Shoulders Display", sans-serif;
+  --secondary-font: "Lexend Deca", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--main-font);
+  color: var(--verylight-gray);
+  background: var(--verylight-gray);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 4rem;
+}
+
+/* cards -- background color */
+.section-one {
+  background: var(--bright-orange);
+}
+
+.section-two {
+  background: var(--dark-cyan);
+}
+
+.section-three {
+  background: var(--verydark-cyan);
+}
+
+/* btn -- font-color */
+.btn-one {
+  color: var(--bright-orange);
+}
+
+.btn-two {
+  color: var(--dark-cyan);
+}
+
+.btn-three {
+  color: var(--verydark-cyan);
+}
+
+/* main */
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem 4rem;
+}
+
+.icon {
+  width: 5rem;
+}
+
+.card-title {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: var(--verylight-gray);
+  font-weight: 700;
+}
+
+.card-description {
+  font-family: var(--secondary-font);
+  max-width: 21rem;
+  font-size: 1.5rem;
+  color: var(--transparent-white);
+  margin-bottom: 6rem;
+  font-weight: 400;
+}
+
+.btn {
+  border-radius: 24px;
+  padding: 1rem;
+  border: 2px solid transparent;
+  width: 12rem;
+  margin-bottom: 2rem;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--transparent-white);
+  border: 2px solid var(--verylight-gray);
+  cursor: pointer;
+}
+
+/* attribution */
+.attribution {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #000;
+}
+.attribution a {
+  color: #000;
+}
+
+/* media queries */
+
+@media (max-width: 40rem) {
+  .card-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .card-description {
+    margin-bottom: 0;
+  }
+}
